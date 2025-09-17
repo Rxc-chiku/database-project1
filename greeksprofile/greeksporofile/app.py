@@ -19,8 +19,8 @@ mysql = MySQL(app)
 
 
 # ------------------ LOGIN ------------------
-# @app.route('/')
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
@@ -150,5 +150,6 @@ def update():
 # ------------------ MAIN ------------------
 if __name__ == "__main__":
     app.run(host="localhost", port=5000, debug=True)
+
 
 
